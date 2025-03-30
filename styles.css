@@ -257,11 +257,19 @@ select.sectionbtn option {
     display : grid;
     justify-items: center;
     gap: 1.5em;
-    size: normal;
+  }
+  .header > div > img {
+    width: 125px;
+    height: 125px;
+  }
+  .header-grid > div > h1 {
+    font-size: 36px !important;
   }
   .header-grid {
     display : grid;
+    max-width: 767px;
     justify-items: center;
+    justify-content: center;
     text-align: center;
     gap: 1.5em;
   }
