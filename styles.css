@@ -6,6 +6,7 @@ body{
   display:flex;
   flex-direction: column;
   height: 100vh;
+  font-family: Kanit;
 }
 .header {
   background: linear-gradient(to bottom, #0f766e, #13364e);
@@ -244,6 +245,10 @@ select.sectionbtn option {
 
 /* view on phone */
 @media (max-width: 767px) {
+  body{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
   .column {
     column-count: 1;
     column-width: auto;
@@ -252,6 +257,7 @@ select.sectionbtn option {
     display : grid;
     justify-items: center;
     gap: 1.5em;
+    size: normal;
   }
   .header-grid {
     display : grid;
