@@ -287,16 +287,13 @@ select.sectionbtn option {
 }
 
 /* view on ipad */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1024px) and (min-device-aspect-ratio: 4/3) {
   .column {
     column-count: 4;
     column-width: auto;
   }
   .header-grid {
     gap: 1em;
-  }
-  .footer {
-    margin-top: 1.5em;
   }
 }
 
