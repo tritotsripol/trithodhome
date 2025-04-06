@@ -115,11 +115,11 @@ body{
   clip-path: inset(0px round 15px);
   overflow: hidden;
 }
-.column > div > div > button > span {
+.column > div > div > button > div {
   z-index: 5;
   position: relative;
 }
-.column > div > div > button:hover span {
+.column > div > div > button:hover div {
   transition: ease 0.5s color;
   color: #2391DE;
 }
@@ -294,9 +294,6 @@ select.sectionbtn option {
   .header-grid {
     gap: 1em;
   }
-  .column > div {
-    margin-bottom: 0;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait) {
@@ -325,9 +322,6 @@ select.sectionbtn option {
     width: 5em;
     text-align: center;
     cursor: pointer;
-  }
-  .column > div {
-    margin-bottom: 0;
   }
 }
 
@@ -363,7 +357,7 @@ body.light .column > div > div > button {
   background-color: #5eead4;
   color: #13364e;
 }
-body.light .column > div > div > button:hover span {
+body.light .column > div > div > button:hover div {
   color: #73c7ff;
 }
 body.light .column > div > div > button::before {
@@ -426,5 +420,5 @@ body.light::-webkit-scrollbar {
   background: #ffffff80;
 }
 body.light::-webkit-scrollbar-thumb {
-  background: #5eead480;
+  background: #5eead4;
 }
