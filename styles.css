@@ -82,7 +82,7 @@ body{
   border-radius: 15px;
   border: solid 1px #0f766e;
   padding: 1em;
-  /* margin: 0 1.5em 1.5em 1.5em; */
+  margin-bottom: 25px;
   color: white;
   break-inside: avoid;
   transition: background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
