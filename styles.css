@@ -294,6 +294,9 @@ select.sectionbtn option {
   .header-grid {
     gap: 1em;
   }
+  .column > div {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait) {
@@ -322,6 +325,9 @@ select.sectionbtn option {
     width: 5em;
     text-align: center;
     cursor: pointer;
+  }
+  .column > div {
+    margin-bottom: 0;
   }
 }
 
