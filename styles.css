@@ -115,11 +115,11 @@ body{
   clip-path: inset(0px round 15px);
   overflow: hidden;
 }
-.column > div > div > button > div {
+.column > div > div > button > span {
   z-index: 5;
   position: relative;
 }
-.column > div > div > button:hover div {
+.column > div > div > button:hover span {
   transition: ease 0.5s color;
   color: #2391DE;
 }
@@ -357,7 +357,7 @@ body.light .column > div > div > button {
   background-color: #5eead4;
   color: #13364e;
 }
-body.light .column > div > div > button:hover div {
+body.light .column > div > div > button:hover span {
   color: #73c7ff;
 }
 body.light .column > div > div > button::before {
@@ -401,4 +401,24 @@ body.light select.sectionbtn div {
 body.light select.sectionbtn option {
   color: black;
   background-color:white;
+}
+
+
+body::-webkit-scrollbar {
+  background: rgba(0,0,0, 0.5);
+  border-radius: 25px;
+  width: 15px;
+  height: 15px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.5);
+  border-radius: 25px;
+  width: 50%;
+  height: 15px;
+}
+body.light::-webkit-scrollbar {
+  background: #ffffff80;
+}
+body.light::-webkit-scrollbar-thumb {
+  background: #5eead480;
 }
