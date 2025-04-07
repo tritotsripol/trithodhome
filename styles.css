@@ -286,7 +286,7 @@ select.sectionbtn option {
 }
 
 /* view on ipad */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1024px) and (aspect-ratio: 4/3) {
   .column {
     column-count: unset;
     display: grid;
