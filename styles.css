@@ -286,9 +286,9 @@ select.sectionbtn option {
 }
 
 /* view on ipad */
-@media (min-width: 768px) and (max-width: 1024px) and (max-height: 768px) {
+@media (min-aspect-ratio: 4/3) {
   .column {
-    column-count: 1 !important;
+    column-count: 2;
   }
   .header-grid {
     gap: 1em;
