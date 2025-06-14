@@ -1,0 +1,426 @@
+body{
+  background-color: #121616;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin:0;
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Kanit;
+}
+.header {
+  background: linear-gradient(to bottom, #0f766e, #13364e);
+  height: max-content;
+  color: white;
+  padding: 2.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5em;
+}
+.header-grid {
+  display: grid;
+  grid-template-rows: repeat(2, max(auto));
+  max-width: 50em;
+  gap: 1.5em;
+}
+.color {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.copyButton {
+  padding: 0.5em 2em; 
+  width: 25%; 
+  height: 2.5em;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  border: none;
+  font-family: Kanit;
+  background-color: #f0f0f0;
+}
+
+.copyButton.active {
+  background-color: white !important;
+  color: white !important;
+}
+
+
+.footer {
+  background: linear-gradient(to bottom, #0f766e, #13364e);
+  height: max-content;
+  color: white;
+  padding: 1.5em;
+  text-align:start;
+  width: 100%;
+  position: relative;
+  bottom : 0;
+  left: 0;
+  box-sizing: border-box;
+  margin-top:2em;
+}
+.content{
+  background-color: #081f1e;
+  border-radius: 15px;
+  border: solid 1px #0f766e;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+.column {
+  column-count: 4;
+  column-gap: 1em;
+  height: max-content;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.column > div {
+  background-color: #081f1e;
+  border-radius: 15px;
+  border: solid 1px #0f766e;
+  padding: 1em;
+  margin-bottom: 25px;
+  color: white;
+  break-inside: avoid;
+  transition: background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
+}
+.column > div:hover {
+  background-color: #13364e;
+  border: solid 1px #2391DE;
+  box-shadow: 0px 0px 10px rgba(35, 144, 222, 0.5);
+}
+.column > div:hover button {
+  transition: background-color 0.5s ease;
+  background-color: #2391DE;
+}
+
+.column > div > div > h1 {
+  margin: 0;
+}
+.column > div > div > button {
+  background-color: #0f766e;
+  color: white;
+  border-radius: 10px;
+  padding: 1em;
+  margin-top: 1em;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-family: Kanit;
+  box-sizing: border-box;
+  position: relative;
+  clip-path: inset(0px round 15px);
+  overflow: hidden;
+}
+.column > div > div > button > div {
+  z-index: 5;
+  position: relative;
+}
+.column > div > div > button:hover div {
+  transition: ease 0.5s color;
+  color: #2391DE;
+}
+.column > div > div > button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+.column > div > div > button:hover::before {
+  transform: translate(-50%, -50%) scale(700);
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  position: fixed;
+  inset: auto 15px 15px auto;
+}
+/* buttons */
+
+/* gotop button */
+.gotop {
+  width: 5em;
+  height: 3em;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: solid 1px black;
+  box-shadow:0 0 5px #13364e80;
+  transition: background-color 1s ease, box-shadow 1s ease;
+}
+.gotop:hover {
+  background-color: black;
+  box-shadow: 0 0 5px rgba(0,0,0, 1);
+}
+.uppy {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.gotop:hover .uppy {
+  transition: opacity 1s ease;  
+  opacity: 1;
+}
+/* gotop button */
+
+/* sectionbtn */
+.sectionbtn {
+  width: 5em ;
+  height: 3em ;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: solid 1px black;
+  box-shadow:0 0 5px #13364e80;
+  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+}
+.sectionbtn:hover {
+  background-color: black;
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+}
+.sectionbtn:focus {
+  outline: none;
+}
+select.sectionbtn {
+  color: rgba(255,255,255,0.5);
+  font-family: 'Kanit', sans-serif;
+  appearance: none;
+  text-align: center;
+  font-weight: bold;
+}
+select.sectionbtn:hover {
+  color: white;
+}
+select.sectionbtn div {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  appearance: none;
+  text-align: center;
+}
+select.sectionbtn option {
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  background-color:#1f1f1f;
+}
+/* sectionbtn */
+
+/* themebtn */
+.themebtn {
+  width: 5em ;
+  height: 3em ;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  border: solid 1px black;
+  box-shadow:0 0 5px #13364e80;
+  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+}
+.themebtn:hover {
+  background-color: black;
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+}
+.themeicon {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.themebtn:hover .themeicon {
+  transition: opacity 1s ease;  
+  opacity: 1;
+}
+/* themebtn */
+
+/* view on phone */
+@media (max-width: 767px) {
+  body{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .column {
+    column-count: 1;
+    column-width: auto;
+  }
+  .header {
+    display : grid;
+    justify-items: center;
+    gap: 1.5em;
+  }
+  .header > div > img {
+    width: 125px;
+    height: 125px;
+  }
+  .header-grid > div > h1 {
+    font-size: 36px !important;
+  }
+  .header-grid {
+    display : grid;
+    max-width: 767px;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5em;
+  }
+  .color {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .color > div {
+    padding: 0 2.5em 0 2.5em;
+    width: 5em;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+/* view on ipad */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .header-grid {
+    gap: 1em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait) {
+  .column {
+    column-count: 1;
+  }
+  .header {
+    display : grid;
+    justify-items: center;
+    gap: 1.5em;
+  }
+  .header-grid {
+    display : grid;
+    justify-items: center;
+    text-align: center;
+    gap: 1.5em;
+  }
+  .color {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .color > div {
+    padding: 0 2.5em 0 2.5em;
+    width: 5em;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+/* theme */
+body.light {
+  background-color: #d1ffff;
+}
+body.light .header, body.light .footer {
+  background: linear-gradient(to bottom, #5eead4, #73c7ff);
+  color: #13364e;
+}
+body.light .content{
+  background-color: #d7fff9;
+  border: solid 1px #5eead4;
+  color: #13364e;
+}
+body.light .column > div {
+  background-color: #d7fff9;
+  border-radius: 15px;
+  border: solid 1px #5eead4;
+  color: #13364e;
+  break-inside: avoid;
+}
+body.light .column > div:hover {
+  background-color: #d1f5ff;
+  border: solid 1px #73c7ff;
+  box-shadow: 0px 0px 10px #73c7ff80;
+}
+body.light .column > div:hover button {
+  background-color: #73c7ff;
+}
+body.light .column > div > div > button {
+  background-color: #5eead4;
+  color: #13364e;
+}
+body.light .column > div > div > button:hover div {
+  color: #73c7ff;
+}
+body.light .column > div > div > button::before {
+  background-color: #13364e;
+}
+
+
+body.light .gotop, body.light .themebtn {
+  background-color: rgba(255,255,255,0.5);
+  border: solid 1px white;
+  box-shadow:0 0 5px #73c7ff80;
+  transition: background-color 1s ease, box-shadow 1s ease;
+}
+body.light .gotop:hover, body.light .themebtn:hover {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(255,255,255, 1);
+}
+body.light .uppy, body.light .themeicon {
+  filter: invert(0);
+  opacity: 0.5;
+}
+body.light .sectionbtn {
+  background-color: rgba(255,255,255,0.5);
+  border: solid 1px white;
+  box-shadow:0 0 5px #73c7ff80;
+  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+}
+body.light .sectionbtn:hover {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(255,255,255,1);
+}
+body.light select.sectionbtn {
+  color: rgba(0,0,0,0.5);
+}
+body.light select.sectionbtn:hover {
+  color: black;
+}
+body.light select.sectionbtn div {
+  color: black;
+}
+body.light select.sectionbtn option {
+  color: black;
+  background-color:white;
+}
+
+
+body::-webkit-scrollbar {
+  background: rgba(0,0,0, 0.5);
+  border-radius: 25px;
+  width: 15px;
+  height: 15px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.5);
+  border-radius: 25px;
+  width: 50%;
+  height: 15px;
+}
+body.light::-webkit-scrollbar {
+  background: #ffffff80;
+}
+body.light::-webkit-scrollbar-thumb {
+  background: #5eead4;
+}
+
+body.dark .sug {
+  color: #50C878;
+}
+body.light .sug {
+  color: #175b2e
+}
