@@ -320,6 +320,14 @@ select.sectionbtn option {
   }
 }
 
+@media (min-width: 1025px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
 /* theme */
 body.light {
   background-color: #d1ffff;
