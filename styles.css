@@ -54,11 +54,6 @@ body{
   padding: 1.5em;
   text-align:start;
   width: 100%;
-  position: relative;
-  bottom : 0;
-  left: 0;
-  box-sizing: border-box;
-  margin-top:2em;
 }
 .content{
   background-color: #081f1e;
@@ -68,14 +63,16 @@ body{
   color: white;
   text-align: center;
   font-size: 24px;
+  margin: 0;
 }
 .column {
   column-count: 4;
-  column-gap: 1em;
+  gap: 25px;
   height: max-content;
   margin: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
   padding: 0;
-  box-sizing: border-box;
 }
 .column > div {
   background-color: #081f1e;
@@ -86,6 +83,9 @@ body{
   color: white;
   break-inside: avoid;
   transition: background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
+}
+.column > div:last-child {
+  margin-bottom: 0;
 }
 .column > div:hover {
   background-color: #13364e;
@@ -133,11 +133,11 @@ body{
   background-color: white;
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.5s ease;
+  transition: transform 0.75s ease;
   z-index: 1;
 }
 .column > div > div > button:hover::before {
-  transform: translate(-50%, -50%) scale(700);
+  transform: translate(-50%, -50%) scale(1500);
 }
 
 /* buttons */
@@ -322,8 +322,6 @@ select.sectionbtn option {
 
 @media (min-width: 1025px) {
   .footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
   }
 }
