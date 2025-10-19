@@ -78,7 +78,7 @@ body{
   border-radius: 15px;
   border: solid 1px #0f766e;
   padding: 1em;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
   color: white;
   break-inside: avoid;
   transition: background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
@@ -282,6 +282,11 @@ select.sectionbtn option {
     text-align: center;
     cursor: pointer;
   }
+  .column > div {
+    margin-bottom: 25px; }
+  .column > div:last-child {
+    margin-bottom: 0;
+  }
 }
 
 /* view on ipad */
@@ -316,6 +321,11 @@ select.sectionbtn option {
     width: 5em;
     text-align: center;
     cursor: pointer;
+  }
+  .column > div {
+    margin-bottom: 25px; }
+  .column > div:last-child {
+    margin-bottom: 0;
   }
 }
 
