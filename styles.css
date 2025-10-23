@@ -102,7 +102,7 @@ body{
 .column > div > div > button {
   background-color: #0f766e;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 1em;
   margin-top: 1em;
   width: 100%;
@@ -111,7 +111,7 @@ body{
   font-family: Kanit;
   box-sizing: border-box;
   position: relative;
-  clip-path: inset(0px round 15px);
+  clip-path: inset(0px round 5px);
   overflow: hidden;
 }
 .column > div > div > button > div {
