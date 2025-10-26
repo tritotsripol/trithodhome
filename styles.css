@@ -46,7 +46,6 @@ body{
   color: white !important;
 }
 
-
 .footer {
   background: linear-gradient(to bottom, #0f766e, #13364e);
   height: max-content;
@@ -58,7 +57,7 @@ body{
   margin-top: auto;
 }
 .content{
-  background-color: #081f1e;
+  background: linear-gradient(to bottom, #081f1e, #081f1e20);
   border-radius: 15px;
   border: solid 1px #0f766e;
   padding: 10px;
@@ -76,7 +75,7 @@ body{
   padding: 0;
 }
 .column > div {
-  background-color: #081f1e;
+  background: linear-gradient(to bottom, #081f1e, #081f1e80);
   border-radius: 15px;
   border: solid 1px #0f766e;
   padding: 1em;
@@ -89,9 +88,9 @@ body{
   margin-bottom: 0;
 }
 .column > div:hover {
-  background-color: #13364e;
+  background: linear-gradient(to bottom, #13364e, #13364e80);
   border: solid 1px #2391DE;
-  box-shadow: 0px 0px 10px rgba(35, 144, 222, 0.5);
+  box-shadow: 0px 0px 10px rgba(35, 144, 222);
 }
 .column > div:hover button {
   transition: background-color 0.5s ease;
@@ -346,21 +345,21 @@ body.light .header, body.light .footer {
   color: #13364e;
 }
 body.light .content{
-  background-color: #d7fff9;
+  background: linear-gradient(to bottom, #d7fff9, #d7fff980);
   border: solid 1px #5eead4;
   color: #13364e;
 }
 body.light .column > div {
-  background-color: #d7fff9;
+  background: #d7fff9;
   border-radius: 15px;
   border: solid 1px #5eead4;
   color: #13364e;
   break-inside: avoid;
 }
 body.light .column > div:hover {
-  background-color: #d1f5ff;
+  background: linear-gradient(to bottom, #d1f5ff, #d1f5ff80);
   border: solid 1px #73c7ff;
-  box-shadow: 0px 0px 10px #73c7ff80;
+  box-shadow: 0px 0px 10px #73c7ff;
 }
 body.light .column > div:hover button {
   background-color: #73c7ff;
@@ -423,7 +422,7 @@ body::-webkit-scrollbar {
   height: 15px;
 }
 body::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.5);
+  background: #0f766e;
   border-radius: 25px;
   width: 50%;
   height: 15px;
