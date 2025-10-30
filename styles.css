@@ -63,7 +63,8 @@ body{
   padding: 10px;
   color: white;
   text-align: center;
-  font-size: 24px;
+  font-size: 36px;
+  font-weight: bold;
   margin: 0;
 }
 .column {
@@ -97,8 +98,12 @@ body{
   background-color: #2391DE;
 }
 
+.column > div > div:nth-child(2n) {
+  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
+}
 .column > div > div > h1 {
   margin: 0;
+  filter: none;
 }
 .column > div > div > button {
   background-color: #0f766e;
@@ -373,6 +378,12 @@ body.light .column > div > div > button:hover div {
 }
 body.light .column > div > div > button::before {
   background-color: #13364e;
+}
+body.light .column > div > div:nth-child(2n) {
+  filter: drop-shadow(3px 3px 3px #5fead580);
+}
+body.light .column > div:hover > div:nth-child(2n) {
+  filter: drop-shadow(3px 3px 3px #73c7ff80);
 }
 
 
