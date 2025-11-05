@@ -1,15 +1,16 @@
 body{
-  background-color: #121616;
+  background: radial-gradient(circle at center, #13364e80 0%, transparent 100%), #0d0f0e;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  margin:0;
   display:flex;
   flex-direction: column;
-  height: 100vh;
   font-family: Kanit;
 }
 .header {
-  background: linear-gradient(to bottom, #0f766e, #13364e);
+  background: linear-gradient(to bottom, #0f766e80, #13364e80);
   height: max-content;
   color: white;
   padding: 2.5em;
@@ -17,6 +18,7 @@ body{
   justify-content: flex-start;
   align-items: center;
   gap: 2.5em;
+  border-radius: 0 0 25px 25px;
 }
 .header-grid {
   display: grid;
@@ -40,14 +42,19 @@ body{
   font-family: Kanit;
   background-color: #f0f0f0;
 }
-
+.copyButton:nth-child(1) {
+  border-radius: 10px 0 0 10px;
+}
+.copyButton:nth-child(4) {
+  border-radius: 0 10px 10px 0;
+}
 .copyButton.active {
   background-color: white !important;
   color: white !important;
 }
 
 .footer {
-  background: linear-gradient(to bottom, #0f766e, #13364e);
+  background: linear-gradient(to bottom, #0f766e80, #13364e80);
   height: max-content;
   color: white;
   padding: 1.5em;
@@ -55,11 +62,11 @@ body{
   width: 100%;
   box-sizing: border-box;
   margin-top: auto;
+  border-radius: 25px 25px 0 0;
 }
 .content{
-  background: linear-gradient(to bottom, #081f1e, #081f1e20);
+  background: #0f766e40;
   border-radius: 15px;
-  border: solid 1px #0f766e;
   padding: 10px;
   color: white;
   text-align: center;
@@ -76,30 +83,25 @@ body{
   padding: 0;
 }
 .column > div {
-  background: linear-gradient(to bottom, #081f1e, #081f1e80);
+  background: #0f766e40;
   border-radius: 15px;
-  border: solid 1px #0f766e;
   padding: 1em;
   margin-bottom: 0px;
   color: white;
   break-inside: avoid;
-  transition: background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
 }
 .column > div:last-child {
   margin-bottom: 0;
 }
 .column > div:hover {
-  background: linear-gradient(to bottom, #13364e, #13364e80);
-  border: solid 1px #2391DE;
-  box-shadow: 0px 0px 10px rgba(35, 144, 222);
+  background: #13364e40;
+  transform: scale(1.05);
+  box-shadow: 0 5px 5px #00000080;
 }
 .column > div:hover button {
   transition: background-color 0.5s ease;
   background-color: #2391DE;
-}
-
-.column > div > div:nth-child(2n) {
-  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
 }
 .column > div > div > h1 {
   margin: 0;
@@ -108,7 +110,7 @@ body{
 .column > div > div > button {
   background-color: #0f766e;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1em;
   margin-top: 1em;
   width: 100%;
@@ -149,8 +151,8 @@ body{
 .buttons {
   display: flex;
   flex-wrap: nowrap;
-  gap: 5px;
   position: fixed;
+  gap: 0px;
   inset: auto 15px 15px auto;
 }
 /* buttons */
@@ -161,22 +163,20 @@ body{
   height: 3em;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  border: solid 1px black;
-  box-shadow:0 0 5px #13364e80;
-  transition: background-color 1s ease, box-shadow 1s ease;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 .gotop:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0, 1);
 }
 .uppy {
   filter: invert(1);
   opacity: 0.5;
 }
 .gotop:hover .uppy {
-  transition: opacity 1s ease;  
+  transition: opacity 0.5s ease;  
   opacity: 1;
 }
 /* gotop button */
@@ -187,15 +187,13 @@ body{
   height: 3em ;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  border: solid 1px black;
-  box-shadow:0 0 5px #13364e80;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 1s ease;
 }
 .sectionbtn:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0,1);
 }
 .sectionbtn:focus {
   outline: none;
@@ -219,7 +217,7 @@ select.sectionbtn div {
 select.sectionbtn option {
   color: white;
   font-family: 'Kanit', sans-serif;
-  background-color:#1f1f1f;
+  background-color:black;
 }
 /* sectionbtn */
 
@@ -229,13 +227,11 @@ select.sectionbtn option {
   height: 3em ;
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
-  border: solid 1px black;
-  box-shadow:0 0 5px #13364e80;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  border: none;
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 1s ease;
 }
 .themebtn:hover {
   background-color: black;
-  box-shadow: 0 0 5px rgba(0,0,0,1);
 }
 .themeicon {
   filter: invert(1);
@@ -343,28 +339,25 @@ select.sectionbtn option {
 
 /* theme */
 body.light {
-  background-color: #d1ffff;
+  background: radial-gradient(circle at center, #73c7ffc0 0%, transparent 100%), #ebf5ff;
 }
 body.light .header, body.light .footer {
-  background: linear-gradient(to bottom, #5eead4, #73c7ff);
+  background: linear-gradient(to bottom, #5eead480, #73c7ff80);
   color: #13364e;
 }
 body.light .content{
-  background: linear-gradient(to bottom, #d7fff9, #d7fff980);
-  border: solid 1px #5eead4;
+  background: #ffffffa0;
   color: #13364e;
 }
 body.light .column > div {
-  background: #d7fff9;
+  background: #ffffffa0;
   border-radius: 15px;
-  border: solid 1px #5eead4;
   color: #13364e;
   break-inside: avoid;
 }
 body.light .column > div:hover {
-  background: linear-gradient(to bottom, #d1f5ff, #d1f5ff80);
-  border: solid 1px #73c7ff;
-  box-shadow: 0px 0px 10px #73c7ff;
+  background: #d7efff;
+  box-shadow: 0 5px 5px #0067ac40;
 }
 body.light .column > div:hover button {
   background-color: #73c7ff;
@@ -379,23 +372,14 @@ body.light .column > div > div > button:hover div {
 body.light .column > div > div > button::before {
   background-color: #13364e;
 }
-body.light .column > div > div:nth-child(2n) {
-  filter: drop-shadow(3px 3px 3px #5fead580);
-}
-body.light .column > div:hover > div:nth-child(2n) {
-  filter: drop-shadow(3px 3px 3px #73c7ff80);
-}
 
 
 body.light .gotop, body.light .themebtn {
   background-color: rgba(255,255,255,0.5);
-  border: solid 1px white;
-  box-shadow:0 0 5px #73c7ff80;
-  transition: background-color 1s ease, box-shadow 1s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 body.light .gotop:hover, body.light .themebtn:hover {
   background-color: white;
-  box-shadow: 0 0 5px rgba(255,255,255, 1);
 }
 body.light .uppy, body.light .themeicon {
   filter: invert(0);
@@ -403,13 +387,10 @@ body.light .uppy, body.light .themeicon {
 }
 body.light .sectionbtn {
   background-color: rgba(255,255,255,0.5);
-  border: solid 1px white;
-  box-shadow:0 0 5px #73c7ff80;
-  transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
 }
 body.light .sectionbtn:hover {
   background-color: white;
-  box-shadow: 0 0 5px rgba(255,255,255,1);
 }
 body.light select.sectionbtn {
   color: rgba(0,0,0,0.5);
@@ -425,10 +406,8 @@ body.light select.sectionbtn option {
   background-color:white;
 }
 
-
 body::-webkit-scrollbar {
-  background: rgba(0,0,0, 0.5);
-  border-radius: 25px;
+  background: #0d0f0e;
   width: 15px;
   height: 15px;
 }
@@ -439,7 +418,7 @@ body::-webkit-scrollbar-thumb {
   height: 15px;
 }
 body.light::-webkit-scrollbar {
-  background: #ffffff80;
+  background: #ebf5ff;
 }
 body.light::-webkit-scrollbar-thumb {
   background: #5eead4;
