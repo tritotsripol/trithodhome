@@ -75,7 +75,7 @@ body{
   margin: 0;
 }
 .column {
-  column-count: 4;
+  column-count: 3;
   gap: 25px;
   height: max-content;
   margin-top: 25px;
